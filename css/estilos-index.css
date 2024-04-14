@@ -1,0 +1,124 @@
+/*Estilos para la barra de navegación*/
+* {
+    box-sizing: border-box;
+}
+
+header {
+    width: 100%;
+    height: 10em;
+    padding: 0 5%;
+}
+
+nav {
+    display: flex;
+    height: 100%;
+    padding: 2em 3em;
+}
+
+.contenedor__nav {
+    display: flex;
+    width: 100%;
+    justify-content: space-between;
+    gap: 2em;
+}
+
+.contenedor__nav img {
+    height: 100%;
+    width: auto;
+}
+
+.menu__nav {
+    display: flex;
+    align-items: center;
+    gap: 2em;
+}
+
+.menu__nav li {
+    width: auto;
+    padding: 15px 20px;
+    border-radius: 20px;
+    white-space: nowrap;
+    color: rgb(0, 0, 0);
+    font-family: "Source Sans 3", sans-serif;
+    font-size: 1rem;
+    font-weight: bold;
+}
+
+.menu__nav li:hover {
+    background-color: rgba(108, 106, 216, 0.5);
+}
+
+/*Estilos para la Sección sobre mi*/
+#seccion__sobremi {
+    position: relative;
+    height: 100vh;
+    min-height: 80rem;
+    max-height: 120rem;
+    background-color: blanchedalmond;
+}
+.contenedor__redes{
+    position: sticky;
+    top: 10%;
+}
+.contenedor__redes ul{
+    display: flex;
+    position: absolute;
+    flex-direction: column;
+}
+.contenedor__redes li{
+    padding: 20px;
+}
+.contenedor__sobremi {
+    display: flex;
+    justify-content: center;
+    padding: 10% 5% 0;
+    gap: 3em;
+    align-items: center;
+}
+.contenedor__sobremi h1 {
+    font-size: 3rem;
+    font-family: "Source Sans 3", sans-serif;
+    text-align: left;
+    padding: 20px;
+}
+
+.contenedor__sobremi p {
+    width: 35em;
+    padding: 20px;
+    text-align: justify;
+    font-family: "Montserrat", sans-serif;
+    font-size: 1.5rem;
+    line-height: 2rem;
+}
+
+.contenedor__imagen__sobremi {
+    width: 25em;
+    height: 25em;
+    border-radius: 50%;
+    overflow: hidden;
+    text-align: center;
+    background-image: url(../Images/fondoImagenSobreMi.gif);
+    background-size: cover;
+    background-position: bottom right;
+    overflow: hidden;
+    transition: all .5s;
+}
+
+.contenedor__imagen__sobremi img {
+    height: 108%;
+    width: auto; 
+    filter: grayscale(30%) drop-shadow(-20px 50px 40px rgb(159, 80, 39)) drop-shadow(30px 50px 60px rgb(63, 77, 161));
+}
+.contenedor__imagen__sobremi:hover{
+    filter:blur(4px);
+}
+
+
+#seccion__hobbies{
+    height: 100vh;
+    min-height: 80rem;
+    max-height: 120rem;
+}
+.contenedor__hobbies{
+
+}
