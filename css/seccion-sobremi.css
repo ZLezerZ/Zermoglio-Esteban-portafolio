@@ -1,0 +1,59 @@
+
+/*Estilos para la Sección SOBRE MI & HABILIDADES  */
+
+.contenedor__sobremi{
+    width: 100%;
+    display: flex;
+    justify-content: space-around;
+    margin-top: 4em;
+}
+.descripcion__sobremi {
+    display: flex;
+    text-align: justify;
+    flex-direction: column;
+    align-items: center;
+    width: 35em;
+    gap: 3em;
+}
+.descripcion__sobremi h3{
+    color: rgb(111, 124, 221);
+    align-self: flex-start;
+    font-size: 2rem;
+}
+.descripcion__sobremi p {
+    font-size: 1.2rem;
+    line-height: 2rem;
+}
+
+.contenedor__habilidades {
+    display: flex;
+    flex-direction: column;
+    gap: 2.5em;
+}
+
+.habilidades__tecnicas {
+    display: flex;
+    flex-direction: column;
+    width: 25em;
+    padding: 20px;
+    border-radius: 25px;
+    gap: 3em;
+    background-color: rgba(255, 255, 255, .1);
+}
+
+.habilidades {
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    gap: 2em;
+}
+.habilidades__tecnicas h3{
+    color: rgb(201, 122, 47);
+    padding: 5px;
+    font-size: 1.5rem;
+    align-self: flex-start;
+}
+
+.habilidades__item {
+    width: 6em;
+}

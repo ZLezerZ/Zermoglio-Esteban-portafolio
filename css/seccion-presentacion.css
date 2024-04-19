@@ -1,0 +1,73 @@
+/*Estilos para la Sección PRESENTACIÓN*/
+#seccion__presentacion {
+    flex-direction: column;
+    justify-content: center;
+    gap: 5em;
+    align-items: center;
+}
+
+.contenedor__presentacion {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-top: 4em;
+}
+
+.descripcion__de__presentacion {
+    max-width: 55em;
+}
+
+.descripcion__de__presentacion h1 span {
+    color: rgb(227, 227, 229);
+}
+
+.descripcion__de__presentacion h1 {
+    font-size: 3.5rem;
+    font-family: "Source Sans 3", sans-serif;
+    font-weight: bold;
+    padding: 20px;
+    color: rgb(111, 124, 221);
+}
+
+.descripcion__de__presentacion h2 {
+    padding: 20px;
+    font-size: 1.5rem;
+    line-height: 2rem;
+}
+
+.contenedor__imagen__presentacion {
+    min-width: 25em;
+    height: 25em;
+    border-radius: 50%;
+    text-align: center;
+    overflow: hidden;
+    background-image: url(../Images/fondoImagenSobreMi.gif);
+    background-size: cover;
+    background-position: bottom right;
+    overflow: hidden;
+    transition: all .5s;
+}
+
+.contenedor__imagen__presentacion img {
+    height: 108%;
+    filter: grayscale(40%) drop-shadow(-20px 50px 40px rgb(159, 80, 39)) drop-shadow(30px 50px 60px rgb(111, 124, 221));
+}
+
+.contenedor__imagen__presentacion:hover {
+    filter: blur(2px)
+}
+
+.boton__proyectos__principal {
+    padding: .9em 2.6em;
+    font-size: 1.3rem;
+    color: rgb(227, 227, 229);
+    background-color: rgba(201, 122, 47, .9);
+    border-radius: 8px;
+    box-shadow: 0px 0px 5px 0px rgba(255, 255, 255, .5), inset -0px 5px 50px -10px rgb(111, 124, 221, .9);
+    transition: all 0.3s ease;
+}
+
+.boton__proyectos__principal:hover {
+    box-shadow: 0px 0px 5px 0px rgba(255, 255, 255, .5), inset -0px 5px 50px 0px rgb(111, 124, 221, .9);
+    transform: translateY(-2px);
+}

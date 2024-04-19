@@ -1,0 +1,38 @@
+@import url("header.css");
+@import url("contenedor-redes.css");
+@import url("seccion-presentacion.css");
+@import url("seccion-sobremi.css");
+@import url("seccion-proyectos.css");
+@import url("seccion-formacion.css");
+@import url("seccion-hobbies.css");
+@import url("seccion-contacto.css");
+@import url("footer.css");
+
+html{
+    scroll-behavior: smooth;
+}
+body{
+    background-color: rgb(23, 25, 35);
+    box-sizing: border-box;
+    font-family: "Montserrat", sans-serif;
+}
+strong {
+    font-weight: bold;
+}
+
+main{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 0% 10% 5%;
+}
+/*ESTILOS PARA TODAS LAS SECCIONES*/
+#seccion__presentacion, #seccion__sobremi, #seccion__formacion, #seccion__hobbies, #seccion__contacto {
+    display: flex;
+    height: 100vh;
+    width: 100%;
+}
+.descripcion__de__presentacion h2, .descripcion__sobremi p, .boton__proyectos__principal a, .proyecto__descripcion p{
+    color: rgb(227, 227, 229);
+}
+

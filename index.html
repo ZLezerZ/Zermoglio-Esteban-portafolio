@@ -14,22 +14,22 @@
     <script src="https://kit.fontawesome.com/400a4b3076.js" crossorigin="anonymous"></script>
     <link rel="stylesheet" href="css/reset.css">
     <link rel="stylesheet" href="css/estilos-index.css">
+    <link rel="stylesheet" href="css/main.css">
     <title>Zermoglio Esteban</title>
 </head>
 
 <body>
     <header>
+        <div class="logo"><a href="#seccion__presentacion"><img src="./Images/logo3.png" alt="logo personal-LezerZeta"></a>
+            <p><Strong>Leonardo Esteban</Strong></p>
+        </div>
         <nav>
-            <div class="logo"><a href="#seccion__principal"><img src="./Images/logo3.png"
-                        alt="logo personal-LezerZeta"></a>
-                <p><Strong>Leonardo Esteban</Strong></p>
-            </div>
             <ul class="menu__nav">
                 <li><a href="#seccion__sobremi">SOBRE MI</a></li>
                 <li><a href="#seccion__sobremi">HABILIDADES</a></li>
+                <li><a href="#seccion__proyectos">PROYECTOS</a></li>
                 <li><a href="#seccion__hobbies">HOBBIES</a></li>
                 <li><a href="#seccion__formacionYcursos">FORMACIÓN</a></li>
-                <li><a href="#seccion__proyectos">PROYECTOS</a></li>
                 <li><a href="#seccion__contacto">CONTACTO</a></li>
             </ul>
         </nav>
@@ -40,12 +40,12 @@
             <ul>
                 <li><a href="https://github.com/ZLezerZ"><i class="fa-brands fa-github fa-2xl"></i></a></li>
                 <li><a href=""><i class="fa-solid fa-envelope fa-2xl"></i></a></li>
-                <li><a href=""><i class="fa-brands fa-linkedin fa-2xl"></i></a></li>
+                <li><a href="https://www.linkedin.com/in/leonardo-zermoglio/"><i class="fa-brands fa-linkedin fa-2xl"></i></a></li>
                 <li><a href=""><i class="fa-brands fa-youtube fa-2xl"></i></a></li>
                 <li><a href=""><i class="fa-solid fa-file fa-2xl"></i><span><strong>CV</strong></span></a></li>
             </ul>
         </div>
-        <section id="seccion__principal">
+        <section id="seccion__presentacion">
             <div class="contenedor__presentacion">
                 <div class="descripcion__de__presentacion">
                     <h1><span>¡Hey! Soy </span>Esteban Zermoglio</h1>
@@ -59,8 +59,7 @@
                         alt="fotografía personal profesional">
                 </div>
             </div>
-            <span class="boton__proyectos__principal"><a
-                    href="#seccion__proyectos"><Strong>PROYECTOS</Strong></a></span>
+                <a class="boton__proyectos__principal" href="#seccion__proyectos"><Strong>PROYECTOS</Strong></a>
         </section>
 
         <section id="seccion__sobremi">
@@ -96,13 +95,13 @@
                                 <img src="Images/tecnologias/JavaScript.png" alt="logo JavaScript">
                             </div>
                             <div class="habilidades__item">
+                                <img src="Images/tecnologias/Java.png" alt="logo Java">
+                            </div>
+                            <div class="habilidades__item">
                                 <img src="Images/tecnologias/MySQL.png" alt="logo MySQL">
                             </div>
                             <div class="habilidades__item">
                                 <img src="Images/tecnologias/GIT.png" alt="logo GIT">
-                            </div>
-                            <div class="habilidades__item">
-                                <img src="Images/tecnologias/GitHub.png" alt="logo GitHub">
                             </div>
                             <!--Agregar más habilidades acá-->
                         </div>
@@ -127,50 +126,61 @@
 
         <section id="seccion__proyectos">
             <div class="contenedor__proyectos">
-                
                 <div class="proyecto__item">
-                    <div class="item__imagenes">
-                        <div><img src="" alt=""></div>
-                        <div><img src="" alt=""></div>
-                        <div><img src="" alt=""></div>
+                    <div class="proyecto__imagen">
+                        <img src="Images/previsualizaciones/preEncriptador.png"
+                            alt="Previsualización del proyecto CodoACodo">
                     </div>
-                    <div class="descripcion__proyecto">
-                        <h3><strong></strong></h3>
-                        <p></p>
+                    <div class="proyecto__info">
+                        <div class="proyecto__descripcion">
+                            <h3><strong>Encriptador Alura</strong></h3>
+                            <p>Este es el primer <strong>desafío</strong> propuesto por el proyecto <strong>Oracle ONE en Alura Latam.</strong> 2024.<br><br>Consiste en la <strong>encriptación de textos</strong> a partir del intercambio de cada vocal por una serie de caracteres específicos.</p>
+                        </div>
+                        <div class="proyecto__botones">
+                            <a href="https://zlezerz.github.io/EncriptadorAlura/"><strong>Probar demo</strong></a>
+                            <a href="https://github.com/ZLezerZ/EncriptadorAlura"><strong>Explorar código</strong></a>
+                        </div>
                     </div>
                 </div>
-
                 <div class="proyecto__item">
-                    <div class="item__imagenes">
-                        <div><img src="" alt=""></div>
-                        <div><img src="" alt=""></div>
-                        <div><img src="" alt=""></div>
+                    <div class="proyecto__imagen">
+                        <img src="Images/previsualizaciones/preTest.png" alt="Previsualización del encriptador">
                     </div>
-                    <div class="descripcion__proyecto">
-                        <h3><strong></strong></h3>
-                        <p></p>
+                    <div class="proyecto__info">
+                        <div class="proyecto__descripcion">
+                            <h3><strong>Test de medios de representación</strong></h3>
+                            <p>Este es un proyecto que se encuentra en una <strong>etapa avanzada de desarrollo</strong> 2023 - 2024. <br><br>Consiste en un <strong>test psicológico</strong> para evaluar la preponderancia de un estilo de aprendizaje.</p>
+                        </div>
+                        <div class="proyecto__botones">
+                            <a href="https://zlezerz.github.io/Test-Medios-De-Representacion/"><strong>Probar demo</strong></a>
+                            <a href="https://github.com/ZLezerZ/Test-Medios-De-Representacion/tree/master"><strong>Explorar código</strong></a>
+                        </div>
                     </div>
                 </div>
-
                 <div class="proyecto__item">
-                    <div class="item__imagenes">
-                        <div><img src="" alt=""></div>
-                        <div><img src="" alt=""></div>
-                        <div><img src="" alt=""></div>
+                    <div class="proyecto__imagen">
+                        <img src="Images/previsualizaciones/preCodoACodo.png" alt="">
                     </div>
-                    <div class="descripcion__proyecto">
-                        <h3><strong></strong></h3>
-                        <p></p>
+                    <div class="proyecto__info">
+                        <div class="proyecto__descripcion">
+                            <h3><strong>Carpintería: El Sauce Boxeador</strong></h3>
+                            <p>Este fue el <strong>primer proyecto</strong> que he desarrollado bajo el curso <strong>CodoACodo 2023</strong>.<br><br>Consiste en una <strong>web responsive</strong> que tiene como temática un emprendimiento de carpintería.</p>
+                        </div>
+                        <div class="proyecto__botones">
+                            <a href="https://zlezerz.github.io/ProyectoCodoACodo/"><strong>Probar demo</strong></a>
+                            <a href="https://github.com/ZLezerZ/ProyectoCodoACodo"><strong>Explorar código</strong></a>
+                        </div>
                     </div>
                 </div>
             </div>
-
         </section>
 
         <section id="seccion__hobbies">
             <div class="contenedor__hobbies">
+
             </div>
         </section>
+
         <section id="seccion__formacionYcursos"></section>
         <section id="seccion__contacto"></section>
         <section></section>
