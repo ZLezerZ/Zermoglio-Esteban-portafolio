@@ -26,10 +26,10 @@ const hobbieDescripciones = document.querySelectorAll('.hobbies__descripcion');
 
 hobbieItems.forEach((item, index) => {
     item.addEventListener('mouseover', () => {
-        hobbieImgs[index].style.filter = 'drop-shadow(0 0 2px rgba(201, 122, 47))';
+        hobbieImgs[index].style.filter = 'drop-shadow(0 0 3px rgba(201, 122, 47))';
     });
     item.addEventListener('mouseout', () => {
-        hobbieImgs[index].style.filter = 'drop-shadow(0 0 1px rgba(201, 122, 47))';
+        hobbieImgs[index].style.filter = 'drop-shadow(0 0 2px rgba(227, 227, 229, .5))';
 
     });
 });
@@ -43,3 +43,14 @@ hobbieDescripciones.forEach((descripcion, index) => {
     })
 });
 //FIN de resaltado y atenuación de hobbies
+
+
+//Lógica para fondo de partículas
+const particulasContainer = document.getElementById('contenedor__particulas');
+const cantidadParticulas = 20; // Cambia esto según la cantidad deseada
+for (let i = 1; i <= cantidadParticulas; i++) {
+    const span = document.createElement('span');
+    span.style.setProperty('--i', Math.floor(Math.random() * (80 -9) + 20)); // Valores aleatorios entre 1 y 100
+    particulasContainer.appendChild(span);
+}
+////FIN de lógica de partículas

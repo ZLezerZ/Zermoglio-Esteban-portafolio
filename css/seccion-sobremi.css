@@ -76,6 +76,6 @@
     animation-timeline: --mostrar;
     animation-name: mostrar;
 
-    animation-range: entry 30% cover 35%;
+    animation-range: entry 60% cover 35%;
     animation-fill-mode: both; /*Esto es para corregir el error visual.*/
 }

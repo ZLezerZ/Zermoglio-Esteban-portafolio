@@ -18,6 +18,7 @@
     border-radius: 10px 10px 25px 25px;
     background-color: rgba(255, 255, 255, .1);
     overflow: hidden;
+    scale: .8;
 }
 
 .hobbies__imagen {
@@ -30,7 +31,7 @@
 
 .hobbies__imagen img {
     width: 70%;
-    filter: drop-shadow(0 0 1px rgba(201, 122, 47));
+    filter: drop-shadow(0 0 2px rgba(227, 227, 229, .5));
     transition: all .5s;
 }
 .hobbies__descripcion {
@@ -65,23 +66,23 @@
 }
 
 /*Animaciones*/
-@keyframes mostrar{
+@keyframes mostrarB{
     from{
         opacity: 0;
-        transform: translateY(100%);
+        transform: translateX(-100%);
     }
     to{
         opacity: 1;
-        transform: translateY(0%);
+        transform: translateX(0%);
     }
 }
 
 .hobbies__item{
-    view-timeline-name: --mostrar;
+    view-timeline-name: --mostrarB;
     view-timeline-axis: block;
 
-    animation-timeline: --mostrar;
-    animation-name: mostrar;
+    animation-timeline: --mostrarB;
+    animation-name: mostrarB;
     animation-duration: 2s;
     animation-fill-mode: both; /*Esto es para corregir el error visual.*/
 }
@@ -89,11 +90,11 @@
     animation-range: entry 0% cover 40%;
 }
 .hobbies__item:nth-child(2){
-    animation-range: entry 40% cover 40%;
+    animation-range: entry 20% cover 40%;
 }
 .hobbies__item:nth-child(3){
-    animation-range: entry 80% cover 40%;
+    animation-range: entry 30% cover 40%;
 }
 .hobbies__item:nth-child(4){
-    animation-range: entry 110% cover 40%;
+    animation-range: entry 40% cover 40%;
 }

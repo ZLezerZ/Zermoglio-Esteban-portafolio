@@ -1,0 +1,39 @@
+.contenedor__particulas{
+    position: fixed; /* Cambiado a fixed */
+    top: 0;
+    left: 0;
+    width: 100vw;
+    height: 100vh;
+    z-index: 1;
+    opacity: .2;
+    margin-top: 4em;
+}
+.particulas{
+    position: relative;
+    display: flex;
+    justify-content: space-around;
+}
+.particulas span{
+    position: relative;
+    width: 20px;
+    height: 20px;
+    background: rgb(111, 124, 221);
+    margin: 0 15px;
+    border-radius: 50%;
+    box-shadow: 0 0 0 10px rgba(111, 124, 221, .2), 0 0 50px rgb(111, 124, 221),  0 0 100px rgba(223, 108, 32); 
+    animation: elevar 15s linear infinite;
+    animation-duration: calc(900s/var(--i));
+}
+.particulas span:nth-child(even){
+    background-color: rgb(201, 122, 47);
+    box-shadow: 0 0 0 10px rgba(201, 122, 47, .2), 0 0 50px rgb(201, 122, 47),  0 0 100px rgb(201, 122, 47); 
+
+}
+@keyframes elevar {
+    0%{
+        transform: translateY(100vh) scale(0);
+    }
+    100%{
+        transform: translateY(-10vh) scale(1.5);
+    }
+}
