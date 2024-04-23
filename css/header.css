@@ -32,6 +32,7 @@ header {
     color: rgb(227, 227, 229);
     font-family: "Source Sans 3", sans-serif;
     font-size: 1.2rem;
+    filter: drop-shadow(0 0 1px rgba(111, 124, 221));
 }
 .menu__nav {
     display: flex;
@@ -48,16 +49,15 @@ header {
     border-radius: 15px;
     white-space: nowrap;
     transition: all .3s;
-    width: 8em;
+    width: 10;
     height: 2.5em;
 }
-.menu__nav li a{
+.nav__link{
     position: relative;
-    color: rgb(227, 227, 229);
     font-family: "Source Sans 3", sans-serif;
     font-weight: bold;
     font-size: 1rem;
-
+    color: rgb(227, 227, 229);
 }
 /*Estilos para el efecto delineado*/
 .menu__nav a:after{
@@ -74,4 +74,7 @@ header {
 }
 .menu__nav a:hover::after{
     transform: scale(1, 1);
+}
+.nav__activo{
+    color: rgb(201, 122, 47);
 }

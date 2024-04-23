@@ -27,12 +27,13 @@ main{
     padding: 0% 10% 5%;
 }
 /*ESTILOS PARA TODAS LAS SECCIONES*/
-#seccion__presentacion, #seccion__sobremi, #seccion__formacion, #seccion__hobbies, #seccion__contacto {
+#seccion__presentacion, #seccion__sobremi, #seccion__proyectos, #seccion__formacionYcursos, #seccion__hobbies, #seccion__contacto {
     display: flex;
-    height: 100vh;
+    min-height: 100vh;
     width: 100%;
+    padding-top: 4em;
 }
-.descripcion__de__presentacion h2, .descripcion__sobremi p, .boton__proyectos__principal a, .proyecto__descripcion p{
+.descripcion__de__presentacion h2, .descripcion__sobremi p, .boton__proyectos__principal a, .proyecto__descripcion p, .hobbies__descripcion p{
     color: rgb(227, 227, 229);
 }
 

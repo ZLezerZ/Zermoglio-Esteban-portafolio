@@ -1,0 +1,99 @@
+.contenedor__hobbies {
+    display: flex;
+    justify-content: center;
+    width: 100%;
+    height: 100%;
+    gap: 3em;
+}
+
+.hobbies__item {
+    position: relative;
+    width: 15em;
+    height: 15em;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: flex-start;
+    cursor: pointer;
+    border-radius: 10px 10px 25px 25px;
+    background-color: rgba(255, 255, 255, .1);
+    overflow: hidden;
+}
+
+.hobbies__imagen {
+    display: flex;
+    justify-content: center;
+    width: 100%;
+    padding-top: 20px;
+    transition: all .5s;
+}
+
+.hobbies__imagen img {
+    width: 70%;
+    filter: drop-shadow(0 0 1px rgba(201, 122, 47));
+    transition: all .5s;
+}
+.hobbies__descripcion {
+    height: 15em;
+    position: absolute;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 1em;
+    padding: 0 25px;
+    background-color: rgba(0, 0, 0, 0.3);
+    bottom: -12em;
+    transition: all .5s ease;
+}
+
+.hobbies__descripcion:hover {
+    transform: translateY(-12em);
+}
+.hobbies__descripcion div:nth-child(1){
+    padding: 15px 0;
+}
+.hobbies__descripcion h3 {
+    color: rgba(111, 124, 221, .8);
+    font-size: 1.3rem;
+}
+
+.hobbies__descripcion p {
+    font-size: .8rem;
+    line-height: 1rem;
+    text-align: justify;
+    font-weight: bold;
+}
+
+/*Animaciones*/
+@keyframes mostrar{
+    from{
+        opacity: 0;
+        transform: translateY(100%);
+    }
+    to{
+        opacity: 1;
+        transform: translateY(0%);
+    }
+}
+
+.hobbies__item{
+    view-timeline-name: --mostrar;
+    view-timeline-axis: block;
+
+    animation-timeline: --mostrar;
+    animation-name: mostrar;
+    animation-duration: 2s;
+    animation-fill-mode: both; /*Esto es para corregir el error visual.*/
+}
+.hobbies__item:nth-child(1){
+    animation-range: entry 0% cover 40%;
+}
+.hobbies__item:nth-child(2){
+    animation-range: entry 40% cover 40%;
+}
+.hobbies__item:nth-child(3){
+    animation-range: entry 80% cover 40%;
+}
+.hobbies__item:nth-child(4){
+    animation-range: entry 110% cover 40%;
+}

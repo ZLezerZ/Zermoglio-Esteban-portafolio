@@ -1,11 +1,9 @@
 
 /*Estilos para la Sección SOBRE MI & HABILIDADES  */
-
 .contenedor__sobremi{
     width: 100%;
     display: flex;
     justify-content: space-around;
-    margin-top: 4em;
 }
 .descripcion__sobremi {
     display: flex;
@@ -56,4 +54,28 @@
 
 .habilidades__item {
     width: 6em;
+}
+/*Animaciones*/
+@keyframes mostrar{
+    from{
+        opacity: 0;
+        transform: translateY(100%);
+        scale: .5;
+    }
+    to{
+        opacity: 1;
+        transform: translateY(0%);
+        scale: 1;
+    }
+}
+
+.habilidades__tecnicas{
+    view-timeline-name: --mostrar;
+    view-timeline-axis: block;
+
+    animation-timeline: --mostrar;
+    animation-name: mostrar;
+
+    animation-range: entry 30% cover 35%;
+    animation-fill-mode: both; /*Esto es para corregir el error visual.*/
 }
