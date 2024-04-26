@@ -49,6 +49,7 @@
 
 .hobbies__descripcion:hover {
     transform: translateY(-12em);
+    justify-content: center;
 }
 .hobbies__descripcion div:nth-child(1){
     padding: 15px 0;

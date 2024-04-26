@@ -1,0 +1,85 @@
+.contenedor__contacto{
+    display: flex;
+    justify-content: center;
+    width: 100%;
+}
+#formulario{
+    width: 30%;
+    min-width: 500px;
+    max-height: 780px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap: 1em;
+    padding: 3em;
+    background-color: rgba(255, 255, 255, .1);
+    border-radius: 20px;
+}
+
+.formulario__item{
+    width: 90%;
+    position: relative;
+    display: flex;
+    flex-direction: column;
+}
+.campo__label{
+    padding-bottom: 25px;
+}
+.campo__input{
+    position: relative;
+    display: flex;
+    align-items: center;
+}
+.campo__input input{
+    width: 100%;
+    padding: 15px 15px;
+    border-radius: 15px;
+    background-color: rgba(227, 227, 229, .8);
+    outline-color: rgb(111, 124, 221);
+}
+
+textarea{
+    width: 100%;
+    resize: none;
+    background-color: rgba(227, 227, 229, .8);
+    border-radius: 15px;
+    padding: 1em;
+    outline-color: rgb(111, 124, 221);
+}
+.contenedor__contacto button{
+    padding: 1em 4em;
+    border-radius: 15px;
+    cursor: pointer;
+    background-color: rgb(201, 122, 47);
+    color: rgb(227, 227, 229);
+}
+
+/*Clases para validación de inputs*/
+.mensaje__error{
+    font-size: .9rem;
+    padding: 10px 0 0 5px;
+    color: rgb(201, 122, 47);
+}
+
+.campo__obligatorio{
+    position: absolute;
+    padding-left: 5px;
+    color: rgb(201, 122, 47);
+    display: none;
+}
+
+.campo__input__i{
+    position: absolute;
+    right: -35px;
+    display: none;
+}
+
+.input__correcto{
+    display: block;
+    color: rgb(111, 124, 221);
+}
+.input__incorrecto{
+    display: block;
+    color: rgb(201, 122, 47);
+}

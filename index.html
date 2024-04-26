@@ -141,8 +141,8 @@
                                 específicos.</p>
                         </div>
                         <div class="proyecto__botones">
-                            <a href="https://zlezerz.github.io/EncriptadorAlura/"><strong>Probar demo</strong></a>
-                            <a href="https://github.com/ZLezerZ/EncriptadorAlura"><strong>Explorar código</strong></a>
+                            <a href="https://zlezerz.github.io/EncriptadorAlura/" target="_blank"><strong>Probar demo</strong></a>
+                            <a href="https://github.com/ZLezerZ/EncriptadorAlura" target="_blank"><strong>Explorar código</strong></a>
                         </div>
                     </div>
                 </div>
@@ -158,9 +158,9 @@
                                 preponderancia de un estilo de aprendizaje.</p>
                         </div>
                         <div class="proyecto__botones">
-                            <a href="https://zlezerz.github.io/Test-Medios-De-Representacion/"><strong>Probar
+                            <a href="https://zlezerz.github.io/Test-Medios-De-Representacion/" target="_blank"><strong>Probar
                                     demo</strong></a>
-                            <a href="https://github.com/ZLezerZ/Test-Medios-De-Representacion/tree/master"><strong>Explorar
+                            <a href="https://github.com/ZLezerZ/Test-Medios-De-Representacion/tree/master" target="_blank"><strong>Explorar
                                     código</strong></a>
                         </div>
                     </div>
@@ -178,8 +178,8 @@
                             </p>
                         </div>
                         <div class="proyecto__botones">
-                            <a href="https://zlezerz.github.io/ProyectoCodoACodo/"><strong>Probar demo</strong></a>
-                            <a href="https://github.com/ZLezerZ/ProyectoCodoACodo"><strong>Explorar código</strong></a>
+                            <a href="https://zlezerz.github.io/ProyectoCodoACodo/" target="_blank"><strong>Probar demo</strong></a>
+                            <a href="https://github.com/ZLezerZ/ProyectoCodoACodo" target="_blank"><strong>Explorar código</strong></a>
                         </div>
                     </div>
                 </div>
@@ -253,7 +253,64 @@
         </section>
 
         <section id="seccion__formacionYcursos" class="seccion"></section>
-        <section id="seccion__contacto" class="seccion"></section>
+
+        <section id="seccion__contacto" class="seccion">
+            <div class="contenedor__contacto">
+                <form id="formulario" action="">
+                    <div class="formulario__item">
+                        <div class="campo__label">
+                            <label for="nombre"><b>Apellido & Nombre</b></label>
+                            <i class="fa-solid fa-asterisk fa-2xs campo__obligatorio"></i>
+                        </div>
+                        <div class="campo__input">
+                            <input type="text" id="nombre" name="nombre" placeholder="Zermoglio Esteban L...">
+                            <i class="fa-solid fa-circle-check fa-xl campo__input__i"></i>
+                            <i class="fa-solid fa-circle-xmark fa-xl campo__input__i"></i>
+                        </div>
+                        <p class="mensaje__error"></p>
+                    </div>
+                    <div class="formulario__item">
+                        <div class="campo__label">
+                            <label for="email"><b>Correo electrónico</b></label>
+                            <i class="fa-solid fa-asterisk fa-2xs campo__obligatorio"></i>
+                        </div>
+                        <div class="campo__input">
+                            <input type="email" id="email" name="email" placeholder="ejemplo@ejemplo.com">
+                            <i class="fa-solid fa-circle-check fa-xl campo__input__i"></i>
+                            <i class="fa-solid fa-circle-xmark fa-xl campo__input__i"></i>
+                        </div>
+                        <p class="mensaje__error"></p>
+                    </div>
+                    <div class="formulario__item">
+                        <div class="campo__label">
+                            <label for="asunto"><b>Asunto </b></label>
+                            <i class="fa-solid fa-asterisk fa-2xs campo__obligatorio"></i>
+                        </div>
+                        <div class="campo__input">
+                            <input type="text" id="asunto" name="asunto"
+                            placeholder="Oferta laboral - desarrollo web...">
+                            <i class="fa-solid fa-circle-check fa-xl campo__input__i"></i>
+                            <i class="fa-solid fa-circle-xmark fa-xl campo__input__i"></i>
+                        </div>
+                        <p class="mensaje__error"></p>
+                    </div>
+                    <div class="formulario__item">
+                        <div class="campo__label">
+                            <label for="mensaje"><b>Mensaje</b></label>
+                            <i class="fa-solid fa-asterisk fa-2xs campo__obligatorio"></i>
+                        </div>
+                        <div class="campo__input">
+                            <textarea name="mensaje" id="mensaje" required cols="30" rows="10"
+                            placeholder="Escriba aquí su mensaje..."></textarea>
+                            <i class="fa-solid fa-circle-check fa-xl campo__input__i"></i>
+                        </div>
+                        <p class="mensaje__error"></p>
+                    </div>
+                    <button type="submit"><b>Enviar</b></button>
+                </form>
+            </div>
+
+        </section>
         <section></section>
     </main>
 

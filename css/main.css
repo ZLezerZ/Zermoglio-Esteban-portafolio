@@ -1,3 +1,4 @@
+@import url("normalize.css");
 @import url("header.css");
 @import url("contenedor-redes.css");
 @import url("seccion-presentacion.css");
@@ -14,7 +15,6 @@ html{
 }
 body{
     background-color: rgb(23, 25, 35);
-    box-sizing: border-box;
     font-family: "Montserrat", sans-serif;
 }
 strong {
@@ -35,7 +35,7 @@ main{
     padding-top: 4em;
     z-index: 10;
 }
-.descripcion__de__presentacion h2, .descripcion__sobremi p, .boton__proyectos__principal a, .proyecto__descripcion p, .hobbies__descripcion p{
+.descripcion__de__presentacion h2, .descripcion__sobremi p, .boton__proyectos__principal a, .proyecto__descripcion p, .hobbies__descripcion p, .formulario__item label{
     color: rgb(227, 227, 229);
 }
 
