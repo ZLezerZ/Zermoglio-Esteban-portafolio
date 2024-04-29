@@ -1,9 +1,9 @@
 .contenedor__hobbies {
-    display: flex;
+    position: relative;
+    display: none;
     justify-content: center;
-    width: 100%;
-    height: 100%;
-    gap: 3em;
+    flex-wrap: wrap;
+    scale: .75;
 }
 
 .hobbies__item {
@@ -18,7 +18,25 @@
     border-radius: 10px 10px 25px 25px;
     background-color: rgba(255, 255, 255, .1);
     overflow: hidden;
-    scale: .8;
+    margin: 0 3em 2em 0em;
+}
+.animacion__agrandarContenedor{
+    animation: agrandarContenedor .5s ease;
+}
+.animacion__achicarContenedor{
+    animation: achicarContenedor 1s ease;
+}
+.animacion__fadeOutArriba{
+    animation: fadeOutArriba 1s ease;
+}
+.animacion__fadeInAbajo{
+    animation: fadeInAbajo 1s ease;
+}
+.animacion__fadeInDerecha{
+    animation: fadeInDerecha 1s ease;
+}
+.animacion__fadeOutIzquierda{
+    animation: fadeOutIzquierda 1s ease;
 }
 
 .hobbies__imagen {
@@ -60,42 +78,9 @@
 }
 
 .hobbies__descripcion p {
-    font-size: .8rem;
+    font-size: 1rem;
     line-height: 1rem;
     text-align: justify;
-    font-weight: bold;
 }
 
 /*Animaciones*/
-@keyframes mostrarB{
-    from{
-        opacity: 0;
-        transform: translateX(-100%);
-    }
-    to{
-        opacity: 1;
-        transform: translateX(0%);
-    }
-}
-
-.hobbies__item{
-    view-timeline-name: --mostrarB;
-    view-timeline-axis: block;
-
-    animation-timeline: --mostrarB;
-    animation-name: mostrarB;
-    animation-duration: 2s;
-    animation-fill-mode: both; /*Esto es para corregir el error visual.*/
-}
-.hobbies__item:nth-child(1){
-    animation-range: entry 0% cover 40%;
-}
-.hobbies__item:nth-child(2){
-    animation-range: entry 20% cover 40%;
-}
-.hobbies__item:nth-child(3){
-    animation-range: entry 30% cover 40%;
-}
-.hobbies__item:nth-child(4){
-    animation-range: entry 40% cover 40%;
-}

@@ -1,8 +1,10 @@
 /*Estilos para la sección PROYECTOS*/
 .contenedor__proyectos{
     width: 100%;
+    max-width: 80em;
     height: 100%;
     display: flex;
+    flex-wrap: wrap;
     flex-direction: column;
     align-items: center;
     gap: 5em;
@@ -10,8 +12,10 @@
 }
 .proyecto__item{
     width: 100%;
+    max-width: 80em;
     height: auto;
     display:flex;
+    flex-wrap: wrap;
     justify-content: space-around;
     gap: 5em;
 }

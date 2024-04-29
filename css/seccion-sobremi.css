@@ -1,17 +1,20 @@
-
-/*Estilos para la Sección SOBRE MI & HABILIDADES  */
+/*Estilos para descripción */
 .contenedor__sobremi{
     width: 100%;
     display: flex;
+    flex-wrap: wrap;
     justify-content: space-around;
+    max-width: 80em;
+    gap: 2em;
 }
 .descripcion__sobremi {
+    position: relative;
     display: flex;
     text-align: justify;
     flex-direction: column;
     align-items: center;
     width: 35em;
-    gap: 3em;
+    gap: 4em;
 }
 .descripcion__sobremi h3{
     color: rgb(111, 124, 221);
@@ -22,7 +25,24 @@
     font-size: 1.2rem;
     line-height: 2rem;
 }
-
+.contenedor__mostrarMas{
+    display: flex;
+    width: 100%;
+    justify-content: flex-end;
+}
+.contenedor__mostrarMas span{
+    position: relative;
+    color: rgb(201, 122, 47);
+    cursor: pointer;
+    transition: all .2s;
+}
+.descripcion__sobremi span:hover{
+    color: rgba(111, 124, 221);
+}
+.sobremi__mostrarMenos{
+    display: none;
+}
+/*Estilos para habilidades*/
 .contenedor__habilidades {
     display: flex;
     flex-direction: column;
@@ -33,9 +53,10 @@
     display: flex;
     flex-direction: column;
     width: 25em;
-    padding: 20px;
+    flex-wrap: wrap;
+    padding: 25px;
     border-radius: 25px;
-    gap: 3em;
+    gap: 2em;
     background-color: rgba(255, 255, 255, .1);
 }
 
@@ -49,25 +70,12 @@
     color: rgb(201, 122, 47);
     padding: 5px;
     font-size: 1.5rem;
-    align-self: flex-start;
 }
 
 .habilidades__item {
-    width: 6em;
+    width: 5em;
 }
-/*Animaciones*/
-@keyframes mostrar{
-    from{
-        opacity: 0;
-        transform: translateY(100%);
-        scale: .5;
-    }
-    to{
-        opacity: 1;
-        transform: translateY(0%);
-        scale: 1;
-    }
-}
+
 
 .habilidades__tecnicas{
     view-timeline-name: --mostrar;
@@ -76,6 +84,7 @@
     animation-timeline: --mostrar;
     animation-name: mostrar;
 
-    animation-range: entry 60% cover 35%;
+    animation-range: entry 30% cover 25%;
     animation-fill-mode: both; /*Esto es para corregir el error visual.*/
 }
+
