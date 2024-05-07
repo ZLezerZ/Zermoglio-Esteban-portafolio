@@ -13,12 +13,15 @@
 
 .contenedor__presentacion {
     display: flex;
+    flex-wrap: wrap;
     align-items: center;
     justify-content: center;
-    margin-top: 4em;
+    margin: 4em 0;
+    gap: 2em;
 }
 
 .descripcion__de__presentacion {
+    width: 55em;
     max-width: 55em;
 }
 
@@ -38,10 +41,11 @@
     padding: 20px;
     font-size: 1.5rem;
     line-height: 2rem;
+    text-wrap: wrap;
 }
 
 .contenedor__imagen__presentacion {
-    min-width: 25em;
+    width: 25em;
     height: 25em;
     border-radius: 50%;
     text-align: center;
@@ -54,8 +58,9 @@
 }
 
 .contenedor__imagen__presentacion img {
-    height: 108%;
-    filter: grayscale(40%) drop-shadow(-20px 50px 40px rgb(159, 80, 39)) drop-shadow(30px 50px 60px rgb(111, 124, 221));
+    scale: .8;
+    transform: translateY(-4em);
+    filter: grayscale(40%) drop-shadow(-20px 30px 40px rgb(159, 80, 39)) drop-shadow(10px 30px 40px rgb(111, 124, 221));
 }
 
 .contenedor__imagen__presentacion:hover {
@@ -66,12 +71,59 @@
     padding: .9em 2.6em;
     font-size: 1.3rem;
     color: rgb(227, 227, 229);
-    background-color: rgba(201, 122, 47, .9);
+    background-color: rgba(201, 122, 47, .7);
     border-radius: 8px;
     transition: all 0.3s ease;
 }
 
 .boton__proyectos__principal:hover {
-    box-shadow: 0px 0px 2px 0px rgba(255, 255, 255, .5), inset -0px 0px 20px 0px rgb(111, 124, 221, .9);
+    background-color: rgba(201, 122, 47, .8);
     transform: translateY(-2px);
+}
+
+/*MEDIA QUERYS*/
+@media only screen and (max-width: 768px) {
+    #seccion__presentacion {
+        justify-content: center;
+        gap: 4em;
+    }
+
+    .contenedor__presentacion {
+        flex-direction: column;
+        gap: 4em;
+        margin: 0;
+    }
+
+    .descripcion__de__presentacion {
+        display: flex;
+        flex-direction: column;
+        width: 100%;
+        gap: 3em;
+    }
+
+    .descripcion__de__presentacion h1 {
+        font-size: 2.2em;
+        padding: 0;
+        margin: 0;
+    }
+
+    .descripcion__de__presentacion h2 {
+        font-size: 1rem;
+        padding: 0;
+    }
+
+    .contenedor__imagen__presentacion {
+        width: 15em;
+        height: 15em;
+    }
+
+    .contenedor__imagen__presentacion img {
+        transform: translateY(-2em);
+    }
+
+    .boton__proyectos__principal {
+        position: relative;
+        padding: .6em 1.6em;
+
+    }
 }

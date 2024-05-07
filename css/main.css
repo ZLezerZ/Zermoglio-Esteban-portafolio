@@ -12,6 +12,8 @@
 
 html{
     scroll-behavior: smooth;
+    font-size: 16px;
+    -webkit-tap-highlight-color: rgba(0, 0, 0, 0); /*Esto es para que cuando se toque el elemento en versión movil no tenga un resaltado azúl*/
 }
 body{
     background-color: rgb(23, 25, 35);
@@ -28,7 +30,7 @@ main{
     padding: 0% 10% 5%;
 }
 /*ESTILOS PARA TODAS LAS SECCIONES*/
-#seccion__sobremi, #seccion__proyectos, #seccion__formacionYcursos, #seccion__hobbies, #seccion__contacto {
+#seccion__sobremi, #seccion__proyectos, #seccion__formacion, #seccion__contacto {
     position: relative;
     display: flex;
     flex-direction: column;
@@ -39,7 +41,7 @@ main{
     padding-top: 4em;
     z-index: 10;
 }
-.descripcion__de__presentacion h2, .descripcion__sobremi p, .boton__proyectos__principal a, .proyecto__descripcion p, .hobbies__descripcion p, .formulario__item label{
+.descripcion__de__presentacion h2, .descripcion__sobremi p, .boton__proyectos__principal a, .proyecto__descripcion p, .hobbies__descripcion p, .formulario__item label, .formacion__descripcion p, .contenedor__footer{
     color: rgb(227, 227, 229);
 }
 .seccion__titulo{
@@ -50,9 +52,9 @@ main{
 }
 .seccion__titulo h3{
     position: relative;
-    white-space: nowrap;
-    font-size: 4rem;
+    font-size: 3rem;
     font-weight: bold;
+    text-align: center;
     background-image: linear-gradient(to bottom, rgb(201, 122, 47), transparent 80%);
     -webkit-background-clip: text;
     background-clip: text;
@@ -74,18 +76,38 @@ main{
         scale: 1;
     }
 }
+@keyframes entradaDerecha{
+    from{
+        opacity: 0;
+        transform: translateX(-100%);
+    }
+    to{
+        opacity: 1;
+        transform: translateX(0%);
+    }
+}
+@keyframes entradaIzquierda{
+    from{
+        opacity: 0;
+        transform: translateX(100%);
+    }
+    to{
+        opacity: 1;
+        transform: translateX(0%);
+    }
+}
 /*Animaciones para la sección hobbies*/
 @keyframes agrandarContenedor{
     from{
         height: 0px;
     }
     to{
-        height: 400px;
+        height: 336px;
     }
 }
 @keyframes achicarContenedor{
     from{
-        height: 400px;
+        height: 336px;
     }
     to{
         height: 0px;
@@ -114,7 +136,7 @@ main{
 @keyframes fadeInDerecha{
     from{
         opacity: 0;
-        transform: translateX(600%);
+        transform: translateX(200%);
     }
     to{
         transform: translateX(0%);
@@ -127,7 +149,32 @@ main{
         transform: translateX(0%);
     }
     to{
-        transform: translateX(-600%);
+        transform: translateX(-200%);
         opacity: 0;
     }
+}
+
+/*Media Querys*/
+
+@media only screen and (max-width: 768px){
+    .seccion__titulo h3{
+        font-size: 1.5rem;
+    background-image: linear-gradient(to bottom, rgb(201, 122, 47), transparent 100%);
+    }
+    @keyframes agrandarContenedor{
+    from{
+        height: 0px;
+    }
+    to{
+        height: 368px;
+    }
+}
+@keyframes achicarContenedor{
+    from{
+        height: 368px;
+    }
+    to{
+        height: 0px;
+    }
+}
 }

@@ -30,30 +30,31 @@ const tituloHobbies = document.querySelector(".contenedor__hobbies .seccion__tit
 const itemsHobbies = document.querySelectorAll(".hobbies__item");
 
 btnMostrarHobbies.addEventListener("click", () => {
-    hobbies.style.display = "flex";
-    hobbies.style.visibility = "hidden";
-    hobbies.classList.remove("animacion__achicarContenedor");
-    hobbies.classList.add("animacion__agrandarContenedor");
     tituloHobbies.classList.remove("animacion__fadeOutArriba");
+    hobbies.classList.add("animacion__agrandarContenedor");
+    hobbies.style.display = "flex";
+    // hobbies.scrollIntoView({ behavior: "smooth", block: "end" });
+    tituloHobbies.classList.add("animacion__fadeInAbajo");
+    hobbies.classList.remove("animacion__achicarContenedor");
     hobbies.style.visibility = "visible";
     itemsHobbies.forEach(item => {
-        item.classList.remove("animacion__fadeOutIzquierda");
-        item.classList.add("animacion__fadeInDerecha");
+        item.classList.remove("animacion__fadeOutArriba");
+        item.classList.add("animacion__fadeInAbajo");
     });
-    tituloHobbies.classList.add("animacion__fadeInAbajo");
     btnMostrarHobbies.style.display = "none";
     btnOcultarHobbies.style.display = "inline";
 });
 
 btnOcultarHobbies.addEventListener("click", () => {
+    tituloHobbies.classList.remove("animacion__fadeInAbajo");
     hobbies.classList.remove("animacion__agrandarContenedor");
     hobbies.classList.add("animacion__achicarContenedor");
-    tituloHobbies.classList.remove("animacion__fadeInAbajo");
     tituloHobbies.classList.add("animacion__fadeOutArriba");
     itemsHobbies.forEach(item => {
-        item.classList.remove("animacion__fadeInDerecha");
-        item.classList.add("animacion__fadeOutIzquierda");
+        item.classList.remove("animacion__fadeInAbajo");
+        item.classList.add("animacion__fadeOutArriba");
     });
+    hobbies.classList.remove("animacion__fadeInAbajo");
     hobbies.classList.add("animacion__achicarContenedor");
     setTimeout(() => {
         hobbies.style.display = "none";
@@ -90,7 +91,7 @@ hobbieDescripciones.forEach((descripcion, index) => {
 //--------------------------------------------------------------------------------------------------------------------------------
 //Lógica para fondo de partículas
 const particulasContainer = document.getElementById("contenedor__particulas");
-const cantidadParticulas = 20;
+const cantidadParticulas = 15;
 for (let i = 1; i <= cantidadParticulas; i++) {
     const span = document.createElement("span");
     span.style.setProperty("--i", Math.floor(Math.random() * (80 - 9) + 20));
@@ -107,6 +108,10 @@ const iconosIncorrectos = document.querySelectorAll(".fa-circle-xmark");
 const leyendaError = document.querySelectorAll(".mensaje__error");
 const asterisco = document.querySelectorAll(".campo__obligatorio");
 var hayErrores = true;
+var errorNombre = true;
+var errorMail = true;
+var errorAsunto = true;
+var errorMensaje = true;
 const expresiones = {
     nombre: /^[a-zA-ZÀ-ÿ\s]{1,40}$/,
     correo: /^[a-zA-Z0-9_.+-]+@[a-zA-Z0-9-]+\.[a-zA-Z0-9-.]+$/,
@@ -119,6 +124,7 @@ function validarFormulario(e) {
     hayErrores = false;
     switch (e.target.name) {
         case "nombre":
+            errorNombre = false;
             if (comprobarCampoInputVacio(e, 0)) return;
             validarCampo(
                 e,
@@ -126,8 +132,12 @@ function validarFormulario(e) {
                 expresiones.nombre,
                 "Evite utilizar números o caracteres especiales."
             );
+            if (hayErrores === true) {
+                errorNombre = true;
+            }
             break;
         case "email":
+            errorMail = false;
             if (comprobarCampoInputVacio(e, 1)) return;
             validarCampo(
                 e,
@@ -135,8 +145,12 @@ function validarFormulario(e) {
                 expresiones.correo,
                 "Debe respetar el formato:  " + e.target.placeholder
             );
+            if (hayErrores === true) {
+                errorMail = true;
+            }
             break;
         case "asunto":
+            errorAsunto = false;
             if (comprobarCampoInputVacio(e, 2)) return;
             validarCampo(
                 e,
@@ -144,6 +158,10 @@ function validarFormulario(e) {
                 expresiones.asunto,
                 "Evite utilizar números o caracteres especiales."
             );
+            if (hayErrores === true) {
+                errorAsunto = true;
+            }
+            break
         default:
             break;
     };
@@ -175,13 +193,13 @@ function validarCampo(e, indice, expresion, mensajeError) {
 };
 
 function validarTextArea() {
-    hayErrores = false;
+    errorMensaje = false;
     if (textArea.value.trim() === "") {
         console.log("ESTÁ ENTRANDO AL IF PARA REMOVER TODO SI NO HAY NADA ESCRITO")
         iconosIncorrectos[3].classList.remove("input__incorrecto");
         iconosCorrectos[3].classList.remove("input__correcto");
         leyendaError[3].textContent = "";
-        hayErrores = true;
+        errorMensaje = true;
         return;
     }
     if (expresiones.mensaje.test(textArea.value) && textArea.value.trim() !== "" && textArea.value.length <= 3000) {
@@ -194,7 +212,7 @@ function validarTextArea() {
         iconosIncorrectos[3].classList.add("input__incorrecto");
         leyendaError[3].textContent =
             "Tamaño máximo del mensaje: 3000 catacteres.";
-        hayErrores = true;
+        errorMensaje = true;
     };
 };
 //validamos lo que va escribiendo el usuario
@@ -219,8 +237,40 @@ formulario.addEventListener("submit", (e) => {
         asterisco[3].style.display = "inline-block";
         hayErrores = true;
     };
-    if (hayErrores === false) {
+    if (errorNombre === false && errorMail === false && errorAsunto === false && errorMensaje === false) {
         formulario.submit()
-    };
+    }
 });
 //FIN de lógica de validación de formulario
+
+//Lógica para mostrar y ocultar el menú HAMBURGUESA en dispositivos móviles
+    const btnHamburguesa = document.querySelector(".menu__hamburguesa");
+    const menu = document.querySelector(".menu__nav");
+    btnHamburguesa.addEventListener("click", () => {
+        btnHamburguesa.classList.toggle("menu__hamburguesa__activo");
+        menu.classList.toggle("mostrar__menu");
+
+    });
+//FIn de lógica de menú hamburguesa
+
+//Logica para ocultar la botonera de redes sociales en dispositivos móviles cuando llega al footer
+const footer = document.querySelector("footer");
+const botoneraRedes = document.querySelector(".contenedor__redes");
+var alturaHastaElFooter = footer.offsetTop;
+
+
+window.addEventListener("scroll", () => {
+    const alturaActual = window.scrollY + window.innerHeight;
+    if (alturaActual >= alturaHastaElFooter) {
+        botoneraRedes.style.display = "none";
+    } else {
+        botoneraRedes.style.display = "block"; // o cualquier estilo que desees
+    }
+});
+//Para reparar errores de posibles cargas diferidas en la página que hagan que la botonera se oculte antes de tiempo, actualizamos el cálculo de la altura del footer
+function actualizarAlturaFooter() {
+    alturaHastaElFooter = footer.offsetTop;
+}
+actualizarAlturaFooter();
+document.addEventListener("DOMContentLoaded", actualizarAlturaFooter);
+//FIN de lógica de redes sociales en footer

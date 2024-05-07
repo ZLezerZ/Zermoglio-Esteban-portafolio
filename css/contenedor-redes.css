@@ -1,8 +1,8 @@
-
 /*Estilos para contenedor de redes*/
 .contenedor__redes {
     position: fixed;
-    background-color: rgb(227, 227, 229);;
+    background-color: rgb(227, 227, 229);
+    ;
     left: 0;
     top: 30%;
     box-shadow: 5px 5px 30px -15px rgba(255, 255, 255, .9);
@@ -30,6 +30,32 @@
     color: white;
     font-size: .8em;
 }
-.contenedor__redes li:hover{
+
+.contenedor__redes li:hover {
     color: rgba(201, 122, 47, .9);
+}
+
+@media only screen and (max-width: 768px) {
+    .contenedor__redes {
+        position: fixed;
+        width: 100%;
+        border-radius: 0;
+        left: 0;
+        top: auto;
+        bottom: 0%;
+        background-color: rgba(227, 227, 229, .7);
+        box-shadow: 5px 5px 30px -15px rgba(255, 255, 255, .0);
+    }
+
+    .contenedor__redes ul {
+        flex-direction: row;
+        justify-content: space-around;
+        align-items: center;
+        gap: 0;
+        padding: 1.5em 0;
+    }
+
+    .contenedor__redes li span{
+        color: rgba(227, 227, 229, .7);
+    }
 }

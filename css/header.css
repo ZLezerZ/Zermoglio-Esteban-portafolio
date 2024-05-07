@@ -1,4 +1,3 @@
-
 /*Estilos para la barra de navegación*/
 header {
     display: flex;
@@ -9,16 +8,17 @@ header {
     width: 100%;
     height: 3.5em;
     background-color: rgb(23, 25, 35);
-    border-bottom: 1px solid rgba(255,255,255, .2);
+    border-bottom: 1px solid rgba(255, 255, 255, .2);
 }
 
-.logo{
+.logo {
     display: flex;
     align-items: center;
     height: 80%;
     margin-left: 3em;
     gap: 1em;
 }
+
 .logo a {
     display: flex;
     align-items: center;
@@ -28,12 +28,14 @@ header {
 .logo img {
     height: 100%;
 }
-.logo p{
+
+.logo p {
     color: rgb(227, 227, 229);
     font-family: "Source Sans 3", sans-serif;
     font-size: 1.2rem;
     filter: drop-shadow(0 0 1px rgba(111, 124, 221));
 }
+
 .menu__nav {
     display: flex;
     justify-content: flex-end;
@@ -52,15 +54,17 @@ header {
     width: 10;
     height: 2.5em;
 }
-.nav__link{
+
+.nav__link {
     position: relative;
     font-family: "Source Sans 3", sans-serif;
     font-weight: bold;
     font-size: 1rem;
     color: rgb(227, 227, 229);
 }
+
 /*Estilos para el efecto delineado*/
-.menu__nav a:after{
+.menu__nav a:after {
     content: "";
     position: absolute;
     height: .1em;
@@ -72,9 +76,89 @@ header {
     border-bottom: 3.5px solid rgb(201, 122, 47);
     transition: transform .3s ease;
 }
-.menu__nav a:hover::after{
+
+.menu__nav a:hover::after {
     transform: scale(1, 1);
 }
-.nav__activo{
+
+.nav__activo {
     color: rgb(201, 122, 47);
 }
+
+/*Estilos para MENU HAMBURGUESA*/
+.menu__hamburguesa {
+    height: 100%;
+    display: none;
+    flex-direction: column;
+    justify-content: center;
+    gap: .5em;
+    margin-right: 2em;
+    cursor: pointer;
+}
+
+.linea__hamburguesa {
+    background-color: rgb(227, 227, 229);
+    height: 2px;
+    width: 2em;
+    transition: all .4s;
+}
+
+.menu__hamburguesa__activo {
+    .linea__hamburguesa:nth-child(1) {
+        transform: translateY(6px) rotate(45deg);
+    }
+
+    .linea__hamburguesa:nth-child(2) {
+        transform: translateY(-4px) rotate(-45deg);
+    }
+
+    .linea__hamburguesa:nth-child(3) {
+        opacity: 0;
+    }
+}
+
+    /*Clases para mostrar menu Hamburguesa*/
+    .mostrar__menu {
+        transform: translateX(-235px);
+    }
+
+    /*MEDIA QUERYS*/
+    @media only screen and (max-width: 768px) {
+        .menu__nav {
+            position: absolute;
+            height: 100vh;
+            position: fixed;
+            flex-direction: column;
+            justify-content: flex-start;
+            right: -283px;
+            top: 3.5em;
+            gap: 0;
+            padding: 1em 1.5em;
+            background-color: rgba(23, 25, 35, .95);
+            border-left: 1px solid rgba(255, 255, 255, .2);
+            transition: all .35s;
+        }
+
+        .menu__nav li {
+            width: 100%;
+            height: 3em;
+            justify-content: flex-start;
+            border-radius: 0;
+            border-bottom: 1px solid rgba(255, 255, 255, 1);
+        }
+        .menu__nav a{
+            width: 100%;
+        }
+        .menu__nav a:after {
+            bottom: -18px;
+            transition: transform .3s ease;
+        }
+        .logo {
+            margin-left: 1em;
+        }
+
+        .menu__hamburguesa {
+            display: flex;
+            z-index: 20;
+        }
+    }

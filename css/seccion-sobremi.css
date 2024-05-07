@@ -6,6 +6,7 @@
     justify-content: space-around;
     max-width: 80em;
     gap: 2em;
+    padding: 5em 0 0em;
 }
 .descripcion__sobremi {
     position: relative;
@@ -13,31 +14,48 @@
     text-align: justify;
     flex-direction: column;
     align-items: center;
-    width: 35em;
-    gap: 4em;
+    width: 38em;
+    max-width: 38em;
+    gap: 3.5em;
 }
 .descripcion__sobremi h3{
     color: rgb(111, 124, 221);
     align-self: flex-start;
     font-size: 2rem;
 }
-.descripcion__sobremi p {
+.descripcion__sobremi__info{
+    display: flex;
+    flex-direction: column;
+    gap: 2em;
     font-size: 1.2rem;
     line-height: 2rem;
+}
+.descripcion__sobremi__info a{
+    width: 9em;
+    cursor: pointer;
+    font-size: .9rem;
+    padding: 3px 10px;
+    color: rgb(227, 227, 229);
+    background-color: rgba(111, 124, 221, .5);
+    border-radius: 15px;
+}
+.descripcion__sobremi__info a:hover{
+    background-color: rgba(111, 124, 221, .6);
 }
 .contenedor__mostrarMas{
     display: flex;
     width: 100%;
     justify-content: flex-end;
 }
+.descripcion__sobremi span:hover{
+    color: rgba(111, 124, 221);
+}
 .contenedor__mostrarMas span{
     position: relative;
     color: rgb(201, 122, 47);
-    cursor: pointer;
     transition: all .2s;
-}
-.descripcion__sobremi span:hover{
-    color: rgba(111, 124, 221);
+    font-size: 1rem;
+    cursor: pointer;
 }
 .sobremi__mostrarMenos{
     display: none;
@@ -52,7 +70,7 @@
 .habilidades__tecnicas {
     display: flex;
     flex-direction: column;
-    width: 25em;
+    max-width: 25em;
     flex-wrap: wrap;
     padding: 25px;
     border-radius: 25px;
@@ -76,7 +94,6 @@
     width: 5em;
 }
 
-
 .habilidades__tecnicas{
     view-timeline-name: --mostrar;
     view-timeline-axis: block;
@@ -87,4 +104,34 @@
     animation-range: entry 30% cover 25%;
     animation-fill-mode: both; /*Esto es para corregir el error visual.*/
 }
+@media screen and (max-width: 768px){
+    .descripcion__sobremi h3{
+        font-size: 1.5rem;
+        text-align: start;
+    }
+    .descripcion__sobremi{
+        gap: 2em;
+    }
+    .descripcion__sobremi__info {
+        font-size: 1rem;
+    }
+    .habilidades__tecnicas{
+        text-align: center;
+    }
+    .habilidades__tecnicas h3{
+        font-size: 1.5rem;
+    }
+    .habilidades{
+        gap: 1em;
+    }
+    
+}
+@media only screen and (max-width: 1350px){
+    .contenedor__habilidades{
+        order: 2;
+    }
+    .contenedor__hobbies{
+        order: 1;
+    }
 
+}

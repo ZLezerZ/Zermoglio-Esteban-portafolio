@@ -3,10 +3,12 @@
 }
 .contenedor__contacto{
     position: relative;
-    width: 70em;
-    height: 40em;
+    width: auto;
+    justify-content: center;
+    min-height: 40em;
     display: flex;
-    gap: 2em;
+    flex-wrap: wrap;
+    gap: 5em;
     justify-content: space-between;
     background-color: rgba(255, 255, 255, .1);
     border-radius: 20px;
@@ -18,20 +20,20 @@
     position: absolute;
     top: 0;
     left: 0;
-    width: 70em;
-    height: 40em;
+    width: 100%;
+    height: 100%;
     background-image: url("../Images/montañasBosque.gif");
     background-size: cover; 
     border-radius: 20px;
     z-index: -1;
-    opacity: .15;
+    opacity: .2;
 }
 
 .descripcion__contacto{
     display: flex;
     flex-direction: column;
-    gap: 4em;
-    width: 35em;
+    gap: 2em;
+    max-width: 25em;
     color: rgb(227, 227, 229);
 }
 .descripcion__contacto h3{
@@ -61,7 +63,6 @@
     flex-direction: column;
     justify-content: space-between;
     align-items: flex-start;
-    gap: 1.6em;
 }
 
 .formulario__item{
@@ -71,7 +72,7 @@
     flex-direction: column;
 }
 .campo__label{
-    padding-bottom: .8em;
+    padding: 0 0 .8em 5px;
 }
 .campo__input{
     position: relative;
@@ -105,9 +106,9 @@ textarea{
 
 /*Clases para validación de inputs*/
 .mensaje__error{
-    position: absolute;
-    bottom: -20px;
+    position: relative;
     font-size: .9rem;
+    padding: 5px ;
     color: rgb(201, 122, 47);
 }
 
@@ -139,13 +140,58 @@ textarea{
     color: rgb(201, 122, 47);
 }
 
-
+/* 
 .contenedor__contacto{
     view-timeline-name: --mostrar;
     view-timeline-axis: block;
     animation-timeline: --mostrar;
     animation-name: mostrar;
     animation-duration: 2s;
-    animation-fill-mode: both; /*Esto es para corregir el error visual.*/
-    animation-range: entry 40% cover 45%;
+    animation-fill-mode: both; 
+    animation-range: entry 0% cover 40%;
+} */
+
+@media only screen and (max-width: 768px){
+
+    .contenedor__contacto{
+        width: 100%;
+        height: auto;
+        flex-direction:  column;
+        padding: 25px;
+        gap: 1.5em;
+    }
+    .descripcion__contacto{
+        gap: 1.2em;
+        width: 100%;
+    }
+    .descripcion__contacto h3{
+        text-align: center;
+        font-size: 1.5rem; ;
+    }
+    .descripcion__contacto p{
+        font-size: 1rem;
+    }
+    .descripcion__contacto span p {
+        word-wrap: break-word
+    }
+    #formulario{
+        align-items: center;
+        min-width: 100%;
+    }
+    .formulario__item{
+        width: 95%
+    }
+    .contenedor__contacto button{
+        padding: .8em 2em;
+        margin-top: .4em;
+    }
+    /*Iconos de input correcto e incorrecto*/
+    .campo__input__i{
+        scale: .8;
+        right: -25px;     
+    }
+    .campo__textArea__i{
+        scale: .8;
+        right: -25px;     
+    }
 }
