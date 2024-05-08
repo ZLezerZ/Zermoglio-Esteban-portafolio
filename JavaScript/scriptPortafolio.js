@@ -113,7 +113,7 @@ var errorMail = true;
 var errorAsunto = true;
 var errorMensaje = true;
 const expresiones = {
-    nombre: /^[a-zA-ZÀ-ÿ\s]{1,40}$/,
+    nombre: /^[a-zA-ZÀ-ÿ\s]{1,50}$/,
     correo: /^[a-zA-Z0-9_.+-]+@[a-zA-Z0-9-]+\.[a-zA-Z0-9-.]+$/,
     asunto: /^[a-zA-ZÀ-ÿ\s]{1,50}$/,
     mensaje: /^[\s\S]{1,3000}$/,
@@ -187,7 +187,11 @@ function validarCampo(e, indice, expresion, mensajeError) {
     } else {
         iconosCorrectos[indice].classList.remove("input__correcto");
         iconosIncorrectos[indice].classList.add("input__incorrecto");
-        leyendaError[indice].textContent = mensajeError;
+        if (e.target.value.length > 50 && (indice === 0 || indice === 2)) {
+            leyendaError[indice].textContent = "Tamaño máximo: 50 catacteres.";
+        } else {
+            leyendaError[indice].textContent = mensajeError;
+        }
         hayErrores = true;
     };
 };
@@ -243,13 +247,13 @@ formulario.addEventListener("submit", (e) => {
 //FIN de lógica de validación de formulario
 
 //Lógica para mostrar y ocultar el menú HAMBURGUESA en dispositivos móviles
-    const btnHamburguesa = document.querySelector(".menu__hamburguesa");
-    const menu = document.querySelector(".menu__nav");
-    btnHamburguesa.addEventListener("click", () => {
-        btnHamburguesa.classList.toggle("menu__hamburguesa__activo");
-        menu.classList.toggle("mostrar__menu");
+const btnHamburguesa = document.querySelector(".menu__hamburguesa");
+const menu = document.querySelector(".menu__nav");
+btnHamburguesa.addEventListener("click", () => {
+    btnHamburguesa.classList.toggle("menu__hamburguesa__activo");
+    menu.classList.toggle("mostrar__menu");
 
-    });
+});
 //FIn de lógica de menú hamburguesa
 
 //Logica para ocultar la botonera de redes sociales en dispositivos móviles cuando llega al footer
