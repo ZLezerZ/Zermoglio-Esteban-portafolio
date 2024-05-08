@@ -375,14 +375,14 @@
                     <p>¡Le responderé tan pronto como me sea posible!</p>
                     </p>
                 </div>
-                <form id="formulario" action="">
+                <form id="formulario" action="https://formsubmit.co/zermoglioleonardo@gmail.com" method="POST">
                     <div class="formulario__item">
                         <div class="campo__label">
                             <label for="nombre"><b>Apellido & Nombre</b></label>
                             <i class="fa-solid fa-asterisk fa-2xs campo__obligatorio"></i>
                         </div>
                         <div class="campo__input">
-                            <input type="text" id="nombre" name="nombre" placeholder="Zermoglio Esteban L..." required>
+                            <input type="text" id="nombre" name="name" placeholder="Zermoglio Esteban L..." required>
                             <i class="fa-solid fa-circle-check fa-xl campo__input__i"></i>
                             <i class="fa-solid fa-circle-xmark fa-xl campo__input__i"></i>
                         </div>
@@ -406,7 +406,7 @@
                             <i class="fa-solid fa-asterisk fa-2xs campo__obligatorio"></i>
                         </div>
                         <div class="campo__input">
-                            <input type="text" id="asunto" name="asunto"
+                            <input type="text" id="asunto" name="subject"
                                 placeholder="Oferta laboral - desarrollo web..." required>
                             <i class="fa-solid fa-circle-check fa-xl campo__input__i"></i>
                             <i class="fa-solid fa-circle-xmark fa-xl campo__input__i"></i>
@@ -419,7 +419,7 @@
                             <i class="fa-solid fa-asterisk fa-2xs campo__obligatorio"></i>
                         </div>
                         <div class="campo__input">
-                            <textarea name="mensaje" id="mensaje" required cols="30" rows="10"
+                            <textarea name="comments" id="mensaje" required cols="30" rows="10"
                                 placeholder="Escriba aquí su mensaje..."></textarea>
                             <i class="fa-solid fa-circle-check fa-xl campo__textArea__i"></i>
                             <i class="fa-solid fa-circle-xmark fa-xl campo__textArea__i"></i>
@@ -427,6 +427,8 @@
                         <p class="mensaje__error"></p>
                     </div>
                     <button type="submit"><b>Enviar</b></button>
+                    <input type="hidden" name="_next" value="https://leonardo-esteban-zermoglio.netlify.app/"> <!--Esto es para redirigir a la página de inicio en lugar de mostrar un mensaje de confirmación y agradecimiento.-->
+                    <input type="hidden" name="_captcha" value="false"> <!--Esto es para evitar que el formulario sea considerado como spam.-->
                 </form>
             </div>
         </section>
@@ -467,18 +469,3 @@
     </div>
     <script src="JavaScript/scriptPortafolio.js"></script>
 </body>
-
-<!-- <div class="contenedor__redes">
-    <ul>
-        <li><a href="https://github.com/ZLezerZ" target="_blank"><i class="fa-brands fa-github fa-2xl"></i></a>
-        </li>
-        <li><a href="mailto:zermoglioleonardo@gmail.com?subject=Consulta - Laboral"><i
-                    class="fa-solid fa-envelope fa-2xl"></i></a></li>
-        <li><a href="https://www.linkedin.com/in/leonardo-zermoglio/" target="_blank"><i
-                    class="fa-brands fa-linkedin fa-2xl"></i></a></li>
-        <li><a href="https://www.youtube.com/@lezerzeta8177/playlists" target="_blank"><i
-                    class="fa-brands fa-youtube fa-2xl"></i></a></li>
-        <li><a href="CV - Zermoglio, Leonardo Esteban - Mayo 2024.pdf" target="_blank"><i
-                    class="fa-solid fa-file fa-2xl"></i><span><strong>CV</strong></span></a></li>
-    </ul>
-</div> -->

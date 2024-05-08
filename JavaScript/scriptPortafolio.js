@@ -123,7 +123,7 @@ function validarFormulario(e) {
     //En este switch validamos cada campo del formulario con su respectiva expresión regular y mostramos los iconos de correcto e incorrecto
     hayErrores = false;
     switch (e.target.name) {
-        case "nombre":
+        case "name":
             errorNombre = false;
             if (comprobarCampoInputVacio(e, 0)) return;
             validarCampo(
@@ -149,7 +149,7 @@ function validarFormulario(e) {
                 errorMail = true;
             }
             break;
-        case "asunto":
+        case "subject":
             errorAsunto = false;
             if (comprobarCampoInputVacio(e, 2)) return;
             validarCampo(
@@ -195,7 +195,6 @@ function validarCampo(e, indice, expresion, mensajeError) {
 function validarTextArea() {
     errorMensaje = false;
     if (textArea.value.trim() === "") {
-        console.log("ESTÁ ENTRANDO AL IF PARA REMOVER TODO SI NO HAY NADA ESCRITO")
         iconosIncorrectos[3].classList.remove("input__incorrecto");
         iconosCorrectos[3].classList.remove("input__correcto");
         leyendaError[3].textContent = "";
