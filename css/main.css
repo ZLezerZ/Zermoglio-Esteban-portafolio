@@ -55,7 +55,7 @@ main{
     font-size: 3rem;
     font-weight: bold;
     text-align: center;
-    background-image: linear-gradient(to bottom, rgb(201, 122, 47), transparent 80%);
+    background-image: linear-gradient(to bottom, rgb(201, 122, 47), rgba(111, 124, 221, .4) 100%);
     -webkit-background-clip: text;
     background-clip: text;
     color: transparent;
@@ -159,7 +159,6 @@ main{
 @media only screen and (max-width: 768px){
     .seccion__titulo h3{
         font-size: 1.5rem;
-    background-image: linear-gradient(to bottom, rgb(201, 122, 47), transparent 100%);
     }
     @keyframes agrandarContenedor{
     from{

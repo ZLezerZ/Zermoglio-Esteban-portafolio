@@ -261,7 +261,6 @@ const footer = document.querySelector("footer");
 const botoneraRedes = document.querySelector(".contenedor__redes");
 var alturaHastaElFooter = footer.offsetTop;
 
-
 window.addEventListener("scroll", () => {
     const alturaActual = window.scrollY + window.innerHeight;
     if (alturaActual >= alturaHastaElFooter) {
