@@ -55,10 +55,10 @@ main{
     font-size: 3rem;
     font-weight: bold;
     text-align: center;
-    background-image: linear-gradient(to bottom, rgb(201, 122, 47), rgba(111, 124, 221, .4) 100%);
+    color: rgba(201, 122, 47, .6);
     -webkit-background-clip: text;
-    background-clip: text;
-    color: transparent;
+    /* background-clip: text;
+    color: transparent; */
     opacity: .3;
     z-index: 2;
     margin-bottom: 1em;
